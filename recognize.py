@@ -3,17 +3,17 @@ import cv2
 import os
 import numpy as np
 
-# --------------------------
+
 # CUSTOM COSINE DISTANCE
-# --------------------------
+
 def cosine_distance(a, b):
     a = np.array(a)
     b = np.array(b)
     return 1 - np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
 
-# --------------------------
+
 # LOAD DATABASE
-# --------------------------
+
 db_path = "known/"
 print("Loading database...")
 
@@ -29,9 +29,9 @@ for file in os.listdir(db_path):
 print(f"Loaded {len(database)} known faces.")
 print("Starting webcam...")
 
-# --------------------------
+
 # REAL-TIME RECOGNITION
-# --------------------------
+
 cap = cv2.VideoCapture(0)
 
 while True:
