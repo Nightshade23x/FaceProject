@@ -23,7 +23,7 @@ for file in os.listdir(db_path):
     if file.lower().endswith((".jpg", ".png", ".jpeg")):
         img_path = os.path.join(db_path, file)
         emb = DeepFace.represent(img_path, model_name="Facenet", enforce_detection=False)
-        name = file.split(".")[0]
+        name = "Samar"
         database.append((name, emb[0]["embedding"]))
 
 print(f"Loaded {len(database)} known faces.")
